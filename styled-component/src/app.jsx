@@ -1,53 +1,23 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
 
-const Container = styled.div`
+const Title = styled.h1`
+color: ${(props)=> props.theme.textColor};
+`;
+const Wrapper = styled.div`
 display: flex;
-`;
-const animation = keyframes`
-0%{
-  transform: rotate(0deg);
-  border-radius: 0px;
-}
-50%{
-  transform:rotate(360deg);
-  border-radius: 100px;
-}
-100%{
-  transform: rotate(0deg);
-  border-radius: 0px;
-}
-`;
-
-const Emoji = styled.div `
-  font-size: 36px;
-`;
-const Box = styled.div`
-width: 200px;
-height: 200px;
-background-color: tomato;
-animation:${animation} 3s linear infinite;
-display: flex;
+height: 100vh;
+width: 100vh;
 justify-content: center;
 align-items: center;
-${Emoji}{
-  font-size: 36px;
-  &:hover{
-  font-size: 40px;
-  }
-  &:active{
-    opacity: 50%;
-  }
-}
+background-color:${(props)=>props.theme.backgroundColor} ;
 `;
 
 const App = () => {
   return (
-    <Container>
-        <Box>
-          <Emoji> 🙃</Emoji>
-          </Box>
-    </Container>
+    <Wrapper>
+    <Title>Hellow</Title>
+    </Wrapper>
   );
 };
 
