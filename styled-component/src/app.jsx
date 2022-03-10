@@ -18,6 +18,10 @@ const animation = keyframes`
   border-radius: 0px;
 }
 `;
+
+const Emoji = styled.div `
+  font-size: 36px;
+`;
 const Box = styled.div`
 width: 200px;
 height: 200px;
@@ -26,7 +30,7 @@ animation:${animation} 3s linear infinite;
 display: flex;
 justify-content: center;
 align-items: center;
-span{
+${Emoji}{
   font-size: 36px;
   &:hover{
   font-size: 40px;
@@ -41,7 +45,7 @@ const App = () => {
   return (
     <Container>
         <Box>
-          <span> 🙃</span>
+          <Emoji> 🙃</Emoji>
           </Box>
     </Container>
   );
